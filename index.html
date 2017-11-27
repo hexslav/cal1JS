@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body style="font-family:arial; background-color:gray;">
+<center>
+<header>
+	<h1>KALKULATOR</h1>
+</header>
+
+
+
+	<input type="number" id="liczba1">
+	<input type="number" id="liczba2">
+		<button type="submit" onClick="dodawanie()">Dodawanie</button>
+		<button type="submit" onClick="minus()">Odejmowanie</button>
+		<button type="submit" onClick="gwiazdka()">Mnożenie</button>
+		<button type="submit" onClick="slesz()">Dzielenie</button>
+
+
+<script type="text/javascript">
+	
+	// pierwszy kalkulator
+	
+		function dodawanie(){
+			var jeden = Number(document.getElementById("liczba1").value);
+			var dwa = Number(document.getElementById("liczba2").value);
+			var wynik = jeden+dwa;
+			document.getElementById("wynik").innerHTML=wynik;
+		}
+		function minus(){
+			var jeden = Number(document.getElementById("liczba1").value);
+			var dwa = Number(document.getElementById("liczba2").value);
+			var wynik = jeden-dwa;
+			document.getElementById("wynik").innerHTML=wynik;
+		}
+		function gwiazdka(){
+			var jeden = Number(document.getElementById("liczba1").value);
+			var dwa = Number(document.getElementById("liczba2").value);
+			var wynik = jeden*dwa;
+			document.getElementById("wynik").innerHTML=wynik;
+		}
+		function slesz(){
+			var jeden = Number(document.getElementById("liczba1").value);
+			var dwa = Number(document.getElementById("liczba2").value);
+			var wynik = jeden/dwa;
+			document.getElementById("wynik").innerHTML=wynik;
+		}
+		
+		//drugi kalkulator
+	
+		var zmienna1=0;
+		var zmienna2=0;
+		
+		function dodaj(){		
+		zmienna1++;
+		document.getElementById("cal2").innerHTML=zmienna1;		
+		suma();
+		odejmowanie();
+		mnozenie();
+		dzielenie();
+		}
+		
+		function odejmij(){		
+		zmienna1--;
+		document.getElementById("cal2").innerHTML=zmienna1;	
+			suma();
+			odejmowanie();
+			mnozenie();
+			dzielenie();
+		}
+		
+		function dodaj2(){		
+		zmienna2++;
+		document.getElementById("cal3").innerHTML=zmienna2;	
+			suma();
+			odejmowanie();
+			mnozenie();
+			dzielenie();
+		}
+		function odejmij2(){		
+		zmienna2--;
+		document.getElementById("cal3").innerHTML=zmienna2;	
+		suma();	
+		odejmowanie();
+		mnozenie();
+		dzielenie();
+		}
+		function suma(){
+			var wynik=zmienna1+zmienna2;
+			document.getElementById("wynik1").innerHTML=wynik;	
+		}
+		function odejmowanie(){
+			var wynik=zmienna1-zmienna2;
+			document.getElementById("wynik2").innerHTML=wynik;	
+		}
+		function mnozenie(){
+			var wynik=zmienna1*zmienna2;
+			document.getElementById("wynik3").innerHTML=wynik;	
+		}
+		function dzielenie(){
+			var wynik=zmienna1/zmienna2;
+			document.getElementById("wynik4").innerHTML=wynik;	
+		}
+	
+	</script>
+	
+<h1>Wynik:<div id="wynik">  </div></h1>
+</center>
+<br/>
+<center><h1>KALKULATOR</h1></center>
+<br/>
+<center>
+<div style="float:left; margin-left:35%; margin-right:0;">
+	<h2> Liczba pierwsza: <div id="cal2">0</div></h2>
+	<button type="submit" onClick="dodaj()"> + </button>
+	<button type="submit" onClick="odejmij()"> - </button>
+	</div >
+	<div style="float:left;">
+	<h2> Liczba druga: <div id="cal3">0</div></h2>
+	<button type="submit" onClick="dodaj2()"> + </button>
+	<button type="submit" onClick="odejmij2()"> - </button>
+	</div>
+	<div style="float:left;">
+	<h4> Wynik dodawania <div id="wynik1">0</div></h4>
+	<h4> Wynik odejmowania <div id="wynik2">0</div></h4>
+	<h4> Wynik Mnożenia <div id="wynik3">0</div></h4>
+	<h4> Wynik Dzielenia <div id="wynik4">0</div></h4>
+	</div>
+</center>
+
+
+</body>
+</html>
